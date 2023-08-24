@@ -41,11 +41,11 @@ void processLine(char *line, stack_t **head)
 			{
 				printf("L<line_number>: usage: push integer\n");
 				exit(EXIT_FAILURE);
-	    		}
+			}
 			argument = atoi(arg_str);
 		}
 		else
-	    		argument = 0;
+			argument = 0;
 
 		for (i = 0; functions[i].name != NULL; i++)
 		{
@@ -56,37 +56,37 @@ void processLine(char *line, stack_t **head)
 			}
 		}
 		token = strtok(NULL, " \n\t");
-    	}
+	}
 }
 
 void processFile(const char *filename)
 {
 	stack_t *head = NULL;
-    	FILE *file;
-    	char line[50];
+	FILE *file;
+	char line[50];
 
-    	file = fopen(filename, "r");
-    	if (file == NULL)
-    	{
+	file = fopen(filename, "r");
+	if (file == NULL)
+	{
 		printf("Failed to open the file.\n");
 		exit(EXIT_FAILURE);
-    	}
+	}
 
-    	while (fgets(line, sizeof(line), file) != NULL)
+	while (fgets(line, sizeof(line), file) != NULL)
 		processLine(line, &head);
 
-    	fclose(file);
+	fclose(file);
 }
 
 int main(int argc, char *argv[])
 {
-    	if (argc != 2)
-    	{
+	if (argc != 2)
+	{
 		printf("Usage: ./monty filename.m\n");
 		return (1);
-    	}
+	}
 
-    	processFile(argv[1]);
+	processFile(argv[1]);
 
-    	return (0);
+	return (0);
 }
