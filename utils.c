@@ -1,5 +1,10 @@
 #include "monty.h"
 
+/**
+ * add - adds the first two nodes then delete the added nodes
+ * @stack: the head of linked list
+ * @line_number: the number contained in list, can be NULL
+*/
 void add(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *ptr = *stack;
@@ -29,6 +34,11 @@ void add(stack_t **stack, unsigned int line_number __attribute__((unused)))
 	printf("%i\n", sum);
 }
 
+/**
+ * swap - swaps the first two nodes
+ * @stack: the head of linked list
+ * @line_number: the number contained in list, can be NULL
+*/
 void swap(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *first = *stack;
@@ -48,6 +58,11 @@ void swap(stack_t **stack, unsigned int line_number __attribute__((unused)))
 	*stack = second;
 }
 
+/**
+ * nop - doesn't do anything
+ * @stack: the head of linked list
+ * @line_number: the number contained in list, can be NULL
+*/
 void nop(stack_t **stack __attribute__((unused)), unsigned int line_number __attribute__((unused)))
 {
 	return;
