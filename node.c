@@ -3,7 +3,7 @@
 /**
  * createNode - creates a doubly linked list node
  * @n: an integer value in the node
- * 
+ *
  * Return: a element to be added to list
 */
 stack_t *createNode(int n)
