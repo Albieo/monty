@@ -8,6 +8,7 @@
 void pall(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *ptr = *stack;
+
 	if (ptr == NULL)
 		return;
 
@@ -26,6 +27,7 @@ void pall(stack_t **stack, unsigned int line_number __attribute__((unused)))
 void pint(stack_t **stack, unsigned int line_number __attribute__((unused)))
 {
 	stack_t *ptr = *stack;
+
 	if (ptr == NULL)
 		return;
 
