@@ -57,7 +57,7 @@ int main(int argc, char *argv[])
 		if (strcmp(function, "push") == 0 && arg_str == NULL)
 		{
 			printf("L<line_number>: usage: push integer\n");
-			exit (EXIT_FAILURE);
+			exit(EXIT_FAILURE);
 		}
 
 		if (arg_str != NULL)
