@@ -81,10 +81,7 @@ void processFile(const char *filename)
 int main(int argc, char *argv[])
 {
 	if (argc != 2)
-	{
-		printf("Usage: ./monty filename.m\n");
-		return (1);
-	}
+		exit(EXIT_FAILURE);
 
 	processFile(argv[1]);
 
