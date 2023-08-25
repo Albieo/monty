@@ -5,7 +5,7 @@
  * @stack: the head of linked list
  * @line_number: the number contained in list, can be NULL
 */
-void add(stack_t **stack, unsigned int line_number __attribute__((unused)))
+void add(stack_t **stack, unsigned int line_number)
 {
 	stack_t *ptr = *stack;
 	int count = 0;
@@ -13,7 +13,7 @@ void add(stack_t **stack, unsigned int line_number __attribute__((unused)))
 
 	if (ptr == NULL || ptr->next == NULL)
 	{
-		printf("L<line_number>: can't add, stack too short\n");
+		printf("L%i: can't add, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
@@ -39,14 +39,14 @@ void add(stack_t **stack, unsigned int line_number __attribute__((unused)))
  * @stack: the head of linked list
  * @line_number: the number contained in list, can be NULL
 */
-void swap(stack_t **stack, unsigned int line_number __attribute__((unused)))
+void swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *first = *stack;
 	stack_t *second = first->next;
 
 	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		printf("L<line_number>: can't swap, stack too short\n");
+		printf("L%i: can't swap, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 

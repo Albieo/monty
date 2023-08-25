@@ -46,13 +46,13 @@ void push(stack_t **stack, unsigned int line_number)
  * @stack: the head of linked list
  * @line_number: the number contained in list, can be NULL
 */
-void pop(stack_t **stack, unsigned int line_number __attribute__((unused)))
+void pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *temp = *stack;
 
 	if (*stack == NULL)
 	{
-		printf("L<line_number>: can't pop an empty stack\n");
+		printf("L%i: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 

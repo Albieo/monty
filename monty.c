@@ -39,7 +39,7 @@ void processLine(char *line, stack_t **head)
 			arg_str = strtok(NULL, " \n\t");
 			if (arg_str == NULL)
 			{
-				printf("L<line_number>: usage: push integer\n");
+				printf("L%i: usage: push integer\n", argument);
 				exit(EXIT_FAILURE);
 			}
 			argument = atoi(arg_str);
